@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6C790C4-4739-479A-80BE-949DD82BAEC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>G_Code_Lathe_Facing</RootNamespace>
+    <AssemblyName>G-Code Lathe Facing</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoreWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoreWPC.Designer.cs">
+      <DependentUpon>frmBoreWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChamfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamfer.Designer.cs">
+      <DependentUpon>frmChamfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChamferWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamferWPC.Designer.cs">
+      <DependentUpon>frmChamferWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrillWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrillWPC.Designer.cs">
+      <DependentUpon>frmDrillWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacingWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacingWPC.Designer.cs">
+      <DependentUpon>frmFacingWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLathe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLathe.Designer.cs">
+      <DependentUpon>frmLathe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacing.Designer.cs">
+      <DependentUpon>frmFacing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBore.Designer.cs">
+      <DependentUpon>frmBore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrill.Designer.cs">
+      <DependentUpon>frmDrill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMill.Designer.cs">
+      <DependentUpon>frmMill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPartNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPartNum.Designer.cs">
+      <DependentUpon>frmPartNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTap.Designer.cs">
+      <DependentUpon>frmTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTapWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTapWPC.Designer.cs">
+      <DependentUpon>frmTapWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurn.Designer.cs">
+      <DependentUpon>frmTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurnWPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurnWPC.Designer.cs">
+      <DependentUpon>frmTurnWPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newDashboard.Designer.cs">
+      <DependentUpon>newDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBoreWPC.resx">
+      <DependentUpon>frmBoreWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChamfer.resx">
+      <DependentUpon>frmChamfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChamferWPC.resx">
+      <DependentUpon>frmChamferWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrillWPC.resx">
+      <DependentUpon>frmDrillWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacingWPC.resx">
+      <DependentUpon>frmFacingWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLathe.resx">
+      <DependentUpon>frmLathe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacing.resx">
+      <DependentUpon>frmFacing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBore.resx">
+      <DependentUpon>frmBore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrill.resx">
+      <DependentUpon>frmDrill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMill.resx">
+      <DependentUpon>frmMill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPartNum.resx">
+      <DependentUpon>frmPartNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTap.resx">
+      <DependentUpon>frmTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTapWPC.resx">
+      <DependentUpon>frmTapWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurn.resx">
+      <DependentUpon>frmTurn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurnWPC.resx">
+      <DependentUpon>frmTurnWPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newDashboard.resx">
+      <DependentUpon>newDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

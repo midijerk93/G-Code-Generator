@@ -1,0 +1,26 @@
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Debug\G-Code Lathe Facing.exe.config
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Debug\G-Code Lathe Facing.exe
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Debug\G-Code Lathe Facing.pdb
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G-Code Generator.csproj.AssemblyReference.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.Dashboard.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmChamfer.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmChamferWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmLathe.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmFacing.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmBore.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmDrill.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmMill.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmPartNum.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmTap.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmTurn.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.Properties.Resources.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G-Code Generator.csproj.GenerateResource.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G-Code Generator.csproj.CoreCompileInputs.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G-Code Lathe Facing.exe
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G-Code Lathe Facing.pdb
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmFacingWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmBoreWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmDrillWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmTapWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.frmTurnWPC.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Debug\G_Code_Lathe_Facing.newDashboard.resources

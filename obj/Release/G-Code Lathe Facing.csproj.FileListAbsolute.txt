@@ -1,0 +1,11 @@
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Release\G-Code Lathe Facing.exe.config
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Release\G-Code Lathe Facing.exe
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\bin\Release\G-Code Lathe Facing.pdb
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G_Code_Lathe_Facing.Properties.Resources.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G-Code Lathe Facing.csproj.GenerateResource.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G-Code Lathe Facing.csproj.CoreCompileInputs.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G-Code Lathe Facing.exe
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G-Code Lathe Facing.pdb
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G-Code Lathe Facing.csproj.AssemblyReference.cache
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G_Code_Lathe_Facing.Dashboard.resources
+C:\Users\midij\source\repos\G-Code Lathe Facing\G-Code Lathe Facing\obj\Release\G_Code_Lathe_Facing.Facing.resources
