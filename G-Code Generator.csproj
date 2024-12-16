@@ -70,6 +70,12 @@
     <Compile Include="frmChamferWPC.Designer.cs">
       <DependentUpon>frmChamferWPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTap.Designer.cs">
+      <DependentUpon>frmTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDrillWPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,23 +112,11 @@
     <Compile Include="frmDrill.Designer.cs">
       <DependentUpon>frmDrill.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMill.Designer.cs">
-      <DependentUpon>frmMill.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPartNum.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPartNum.Designer.cs">
       <DependentUpon>frmPartNum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTap.Designer.cs">
-      <DependentUpon>frmTap.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTapWPC.cs">
       <SubType>Form</SubType>
@@ -162,6 +156,9 @@
     <EmbeddedResource Include="frmChamferWPC.resx">
       <DependentUpon>frmChamferWPC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTap.resx">
+      <DependentUpon>frmTap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDrillWPC.resx">
       <DependentUpon>frmDrillWPC.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,14 +177,8 @@
     <EmbeddedResource Include="frmDrill.resx">
       <DependentUpon>frmDrill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMill.resx">
-      <DependentUpon>frmMill.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPartNum.resx">
       <DependentUpon>frmPartNum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTap.resx">
-      <DependentUpon>frmTap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTapWPC.resx">
       <DependentUpon>frmTapWPC.cs</DependentUpon>

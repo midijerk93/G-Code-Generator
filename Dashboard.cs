@@ -27,12 +27,12 @@ namespace G_Code_Lathe_Facing
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void millbutton_Click(object sender, EventArgs e)
-        {
-            frmMill frm = new frmMill();
-            frm.ShowDialog();
-            this.Close();
-        }
+        //private void millbutton_Click(object sender, EventArgs e)
+        //{
+            //frmMill frm = new frmMill();
+            //frm.ShowDialog();
+            //this.Close();
+        //}
 
         private void lathebutton_Click(object sender, EventArgs e)
         {

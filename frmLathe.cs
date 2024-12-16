@@ -17,7 +17,7 @@ namespace G_Code_Lathe_Facing
     //
     // checking for previous tool, add multi turn capablity, update all forms for active controls on load
 
-   
+
 
     public partial class frmLathe : Form
     {
@@ -35,7 +35,7 @@ namespace G_Code_Lathe_Facing
             int nHeightEllipse
             );
 
-      
+
 
         public frmLathe()
         {
@@ -47,7 +47,7 @@ namespace G_Code_Lathe_Facing
 
             this.ActiveControl = partNum;
 
-        }      
+        }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -103,19 +103,7 @@ namespace G_Code_Lathe_Facing
                 {
                     File.WriteAllText(sfd.FileName, mainTextbox.Text);
                 }
-            }            
-        }
-
-        private void tap_Click(object sender, EventArgs e)
-        {
-            frmTap frm = new frmTap();
-            frm.ShowDialog();
-        }
-
-        private void partNum_Click(object sender, EventArgs e)
-        {
-            frmPartNum frm = new frmPartNum();
-            frm.ShowDialog();
+            }
         }
 
         private void boreButton_Click(object sender, EventArgs e)
@@ -135,7 +123,18 @@ namespace G_Code_Lathe_Facing
             frmChamferWPC frm = new frmChamferWPC();
             frm.ShowDialog();
         }
-    
-    }
 
+        private void partNum_Click(object sender, EventArgs e)
+        {
+            frmPartNum frm = new frmPartNum();
+            frm.ShowDialog();
+        }
+
+        private void tapButton_Click(Object sender, EventArgs e)
+        {
+            frmTapWPC frm = new frmTapWPC();
+            frm.ShowDialog();
+        }
+
+    }
 }

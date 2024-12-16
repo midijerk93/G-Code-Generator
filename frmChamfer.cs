@@ -75,23 +75,16 @@ namespace G_Code_Lathe_Facing
 
             }
 
-            //
             // Variables
-            //
             double turnod = Math.Round(materialdia, 3);
             double pass = Math.Round(depthofcut * 2, 3);
             double radians = angle * (Math.PI / 180);
             double tan = Math.Tan(radians);
             double chamferTurnLength = Math.Round(anglelength + noseradius - .02, 3);
-            double angledepth = Math.Round(tan * (chamferTurnLength + noseradius) * 2, 3);
+            double angledepth = Math.Round(tan * chamferTurnLength * 2, 3);
             double startdia = turnod - angledepth;
 
-
-            //
             // Start chamfering
-            //
-            DialogBox.Text += "(ROUGH CHAMFER);";
-            DialogBox.Text += Environment.NewLine;
 
             double chamferPasses = (turnod - startdia) / pass;
 
@@ -104,13 +97,13 @@ namespace G_Code_Lathe_Facing
                 while (chamferPasses > 1)
                 {
 
-                    DialogBox.Text += "G0 X" + currentroughstartdia + ";";
+                    DialogBox.Text += "G0 X" + currentroughstartdia.ToString("F4") + ";";
                     DialogBox.Text += Environment.NewLine;
                     DialogBox.Text += "G1 Z0. F.012;";
                     DialogBox.Text += Environment.NewLine;
-                    DialogBox.Text += "G1 X" + (turnod + .03) + " Z-" + (chamferTurnLength + .02) + ";";
+                    DialogBox.Text += "G1 X" + (turnod + .03).ToString("F4") + " Z-" + (chamferTurnLength + .02).ToString("F4") + ";";
                     DialogBox.Text += Environment.NewLine;
-                    DialogBox.Text += "G0 X" + (turnod + .500) + " Z.25;";
+                    DialogBox.Text += "G0 X" + (turnod + .500).ToString("F4") + " Z.25;";
                     DialogBox.Text += Environment.NewLine;
 
                     currentroughstartdia -= pass;
@@ -118,13 +111,13 @@ namespace G_Code_Lathe_Facing
 
                     if (currentroughstartdia < (startdia + .03))
                     {
-                        DialogBox.Text += "G0 X" + ((startdia + .030) - .05) + ";";
+                        DialogBox.Text += "G0 X" + ((startdia + .030) - .05).ToString("F4") + ";";
                         DialogBox.Text += Environment.NewLine;
                         DialogBox.Text += "G1 Z0. F.012;";
                         DialogBox.Text += Environment.NewLine;
-                        DialogBox.Text += "G1 X" + (startdia + .030) + " Z-.02;";
+                        DialogBox.Text += "G1 X" + (startdia + .030).ToString("F4") + " Z-.02;";
                         DialogBox.Text += Environment.NewLine;
-                        DialogBox.Text += "G1 X" + (turnod + .030) + " Z-" + (chamferTurnLength + .02) + ";";
+                        DialogBox.Text += "G1 X" + (turnod + .030).ToString("F4") + " Z-" + (chamferTurnLength + .02).ToString("F4") + ";";
                         DialogBox.Text += Environment.NewLine;
                     }
 
@@ -156,19 +149,13 @@ namespace G_Code_Lathe_Facing
 
             }
 
-            //
             // Variables
-            //
             double turnod = Math.Round(materialdia, 3);
             double pass = Math.Round(depthofcut * 2, 3);
-            double radians = angle * (Math.PI / 180);
-            double tan = Math.Tan(radians);
             double chamferTurnLength = Math.Round(anglelength + noseradius, 3);
-            double angledepth = Math.Round(tan * (chamferTurnLength + noseradius) * 2, 3);
+            double angledepth = chamferTurnLength * 2;
             double startdia = turnod - angledepth;
-
-            DialogBox.Text += "(ROUGH CHAMFER);";
-            DialogBox.Text += Environment.NewLine;
+            double maxDepth = (turnod - angledepth) + .03;
 
             // Calculates number of passes for roughing chamfer
             if ((turnod - startdia) > pass)
@@ -181,26 +168,21 @@ namespace G_Code_Lathe_Facing
                 while (chamferPasses > 1)
                 {
 
-                    DialogBox.Text += "G0 X" + currentroughstartdia + ";";
+                    DialogBox.Text += "G0 X" + currentroughstartdia.ToString("F4") + ";";
                     DialogBox.Text += Environment.NewLine;
                     DialogBox.Text += "G1 Z0. F.012;";
                     DialogBox.Text += Environment.NewLine;
-                    DialogBox.Text += "G1 X" + turnod + " Z-" + chamferTurnLength + ";";
+                    DialogBox.Text += "G1 X" + turnod.ToString("F4") + " Z-" + chamferTurnLength.ToString("F4") + ";";
                     DialogBox.Text += Environment.NewLine;
-                    DialogBox.Text += "G0 X" + (turnod + .500) + " Z.25;";
+                    DialogBox.Text += "G0 X" + (turnod + .500).ToString("F4") + " Z.25;";
                     DialogBox.Text += Environment.NewLine;
 
                     currentroughstartdia -= pass;
                     chamferPasses -= 1;
 
-                    if (currentroughstartdia < (startdia + .03))
+                    if (currentroughstartdia < maxDepth)
                     {
-                        DialogBox.Text += "G0 X" + (startdia + .030) + ";";
-                        DialogBox.Text += Environment.NewLine;
-                        DialogBox.Text += "G1 Z0. F.012;";
-                        DialogBox.Text += Environment.NewLine;
-                        DialogBox.Text += "G1 X" + (turnod + .030) + " Z-" + chamferTurnLength + ";";
-                        DialogBox.Text += Environment.NewLine;
+                        currentroughstartdia = maxDepth;
                     }
 
                 }
@@ -227,32 +209,30 @@ namespace G_Code_Lathe_Facing
 
             }
 
-            //
             // Variables
-            //
             double radians = angle * (Math.PI / 180);
             double tan = Math.Tan(radians);
-            double chamferTurnLength = Math.Round(anglelength + noseradius - .023, 3);
+            double chamferTurnLength = Math.Round(anglelength + noseradius - .020, 3);
             double finishChamferTurnLength = Math.Round(anglelength + noseradius - .02, 3);
-            double angledepth = Math.Round(tan * (chamferTurnLength + noseradius) * 2, 3);
+            double angledepth = Math.Round(tan * chamferTurnLength * 2, 3);
             double roughstartdia = (materialdia - angledepth) + .03;
             double finishstartdia = materialdia - angledepth;
 
-            DialogBox.Text += "(FINISH CHAMFER);";
+            DialogBox.Text += "G0 X" + (materialdia + 1.000).ToString("F4") + " Z.1";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G0 X" + (finishstartdia - .05) + ";";
+            DialogBox.Text += "G0 X" + (finishstartdia - .05).ToString("F4") + ";";
             DialogBox.Text += Environment.NewLine;
             DialogBox.Text += "G1 Z0. F.012;";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G1 X" + finishstartdia + " Z-.02;";
+            DialogBox.Text += "G1 X" + finishstartdia.ToString("F4") + " Z-.02;";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G1 X" + materialdia + " Z-" + (finishChamferTurnLength + .02) + ";";
+            DialogBox.Text += "G1 X" + materialdia.ToString("F4") + " Z-" + (finishChamferTurnLength + .02).ToString("F4") + ";";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G0 X" + (materialdia + .5) + " Z.25;";
+            DialogBox.Text += "G0 X" + (materialdia + .5).ToString("F4") + " Z.25;";
             DialogBox.Text += Environment.NewLine;
         }
 
-        private void finishChamfer_45()
+        private void FinishChamfer_45()
         {
             if (double.TryParse(materialtextbox.Text, out double materialdia))
             {
@@ -271,24 +251,20 @@ namespace G_Code_Lathe_Facing
 
             }
 
-            //
             // Variables
-            //
-            double radians = angle * (Math.PI / 180);
-            double tan = Math.Tan(radians);
             double finishChamferTurnLength = Math.Round(anglelength + noseradius, 3);
-            double angledepth = Math.Round(tan * (finishChamferTurnLength + noseradius) * 2, 3);
+            double angledepth = finishChamferTurnLength * 2;
             double finishstartdia = materialdia - angledepth;
 
-            DialogBox.Text += "(FINISH CHAMFER);";
+            DialogBox.Text += "G0 X" + (materialdia + 1.000).ToString("F4") + " Z.1";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G0 X" + finishstartdia + ";";
+            DialogBox.Text += "G0 X" + finishstartdia.ToString("F4") + ";";
             DialogBox.Text += Environment.NewLine;
             DialogBox.Text += "G1 Z0. F.012;";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G1 X" + materialdia + " Z-" + finishChamferTurnLength + ";";
+            DialogBox.Text += "G1 X" + materialdia.ToString("F4") + " Z-" + finishChamferTurnLength.ToString("F4") + ";";
             DialogBox.Text += Environment.NewLine;
-            DialogBox.Text += "G0 X" + (materialdia + .5) + " Z.25;";
+            DialogBox.Text += "G0 X" + (materialdia + .5).ToString("F4") + " Z.25;";
             DialogBox.Text += Environment.NewLine;
         }
 
@@ -335,7 +311,7 @@ namespace G_Code_Lathe_Facing
             else
             {
                 MessageBox.Show("Enter chamfer length numerically only");
-               
+
             }
         }
 
@@ -439,23 +415,19 @@ namespace G_Code_Lathe_Facing
 
             }
 
-            //
             // Variables
-            //
             string insert = insertTypeFinishTextbox.Text.ToUpper();
             double radians = angle * (Math.PI / 180);
             double tan = Math.Tan(radians);
-            double chamferTurnLength = Math.Round(anglelength + noseradius - .02, 3);
+            double chamferTurnLength = Math.Round(anglelength + noseradius, 3);
             double angledepth = Math.Round(tan * (chamferTurnLength + noseradius) * 2, 3);
             double startdia = materialdia - angledepth;
             double pass = depthofcut * 2;
             double chamferpasses = (materialdia - startdia) / pass;
 
-            MessageBox.Show(Convert.ToString(chamferpasses));
-
             Maxrpmcheck(materialdia);
 
-            
+
             if (chamferpasses > 1)
             {
 
@@ -494,9 +466,9 @@ namespace G_Code_Lathe_Facing
                 }
 
                 // starts rough chamfering g code
-                DialogBox.Text += "(ROUGH CHAMFER);";
+                DialogBox.Text += "(" + angle + "° ANGLE CHAMFER)";
                 DialogBox.Text += Environment.NewLine;
-                DialogBox.Text += workPieceCord + ";";
+                DialogBox.Text += "G" + workPieceCord + ";";
                 DialogBox.Text += Environment.NewLine;
                 DialogBox.Text += "M8;";
                 DialogBox.Text += Environment.NewLine;
@@ -507,44 +479,91 @@ namespace G_Code_Lathe_Facing
                 DialogBox.Text += "G28 U0.;";
                 DialogBox.Text += Environment.NewLine;
                 DialogBox.Text += "G0 Z.1;";
-                DialogBox.Text += Environment.NewLine;               
+                DialogBox.Text += Environment.NewLine;
 
-                // Rough chamfer switch              
-                switch (angle)
+                // rought chamfer if else
+                if (angle == 45)
                 {
-                    // 0°-44.9°
-                    case double i when i > 0 && i < 44.9:
-                        roughChamfer();
-                        break;
-                    // 45°
-                    case double i when i == 45:
-                        roughChamfer_45();
-                        break;
-                    // 45.1°-90°
-                    case double i when i > 45:
-                        roughChamfer();
-                        break;
+                    roughChamfer_45();
+                }
+                else
+                {                
+                    roughChamfer();
                 }
 
-
+                // finish chamfer if else
+                if (angle == 45)
+                {
+                    FinishChamfer_45();
+                }
+                else
+                {
+                    finishChamfer();
+                }
             }
 
-
-            // Finish chamfer switch        
-            switch (angle)
+            if (chamferpasses <= 1)
             {
-                // 0°-44.9°
-                case double i when i > 0 && i < 44.9:
+
+                DialogBox.Text = "";
+
+                DialogBox.Text += Environment.NewLine;
+
+                // Converts tool number and offset numbers to have zero in front or nothing in front
+                if (toolnum < 10)
+                {
+                    DialogBox.Text += "T0" + toolnum;
+                    if (offsetnum < 10)
+                    {
+                        DialogBox.Text += "0" + offsetnum + "(" + insert + ")";
+                        DialogBox.Text += Environment.NewLine;
+                    }
+                    if (offsetnum >= 10)
+                    {
+                        DialogBox.Text += offsetnum + "(" + insert + ")";
+                        DialogBox.Text += Environment.NewLine;
+                    }
+                }
+                if (toolnum >= 10)
+                {
+                    DialogBox.Text += "T" + toolnum;
+                    if (offsetnum < 10)
+                    {
+                        DialogBox.Text += "0" + offsetnum + "(" + insert + ")";
+                        DialogBox.Text += Environment.NewLine;
+                    }
+                    if (offsetnum >= 10)
+                    {
+                        DialogBox.Text += offsetnum + "(" + insert + ")";
+                        DialogBox.Text += Environment.NewLine;
+                    }
+                }
+
+                // starts rough chamfering g code
+                DialogBox.Text += "(" + angle + "° ANGLE CHAMFER)";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "G" + workPieceCord + ";";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "M8;";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "G50 S" + rpm + "(MAX RPM);";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "G96 S650 M3(SURFACE FOOTAGE);";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "G28 U0.;";
+                DialogBox.Text += Environment.NewLine;
+                DialogBox.Text += "G0 Z.1;";
+                DialogBox.Text += Environment.NewLine;
+
+                // finish chamfer if else
+                if (angle == 45)
+                {
+                    FinishChamfer_45();
+                }
+                else
+                {
                     finishChamfer();
-                    break;
-                // 45°
-                case double i when i == 45:
-                    finishChamfer_45();
-                    break;
-                // 45.1°-90°
-                case double i when i > 45:
-                    finishChamfer();
-                    break;
+                }
             }
 
             DialogBox.Text += "G28 U0.;";
@@ -553,7 +572,7 @@ namespace G_Code_Lathe_Facing
             DialogBox.Text += Environment.NewLine;
             DialogBox.Text += "M1;";
 
-        }        
+        }
 
     }
 

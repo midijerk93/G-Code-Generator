@@ -90,7 +90,7 @@ namespace G_Code_Lathe_Facing
             this.millbutton.TabIndex = 25;
             this.millbutton.Text = "Mill";
             this.millbutton.UseVisualStyleBackColor = true;
-            this.millbutton.Click += new System.EventHandler(this.millbutton_Click);
+            //this.millbutton.Click += new System.EventHandler(this.millbutton_Click);
             // 
             // lathebutton
             // 
